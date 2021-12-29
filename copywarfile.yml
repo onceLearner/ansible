@@ -1,0 +1,11 @@
+---
+-
+  become: true
+  hosts: all
+  tasks:
+    -
+      copy:
+        dest: /opt/homebrew/cellar/tomcat@9/9.0.56_1/libexec/webapps
+        src: /opt/artifact/target/AtelierGit-0.0.1-SNAPSHOT.war
+      name: "copy jar/war onto tomcat servers"
+
